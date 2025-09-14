@@ -1,0 +1,15 @@
+def tokenize(lines):
+    words = []
+    for line in lines:
+        start = 0
+
+        while start < len(line):
+            if not line[start].isspace():
+                print(line[start])
+                
+        start += 1
+    return words
+
+
+lines = ['    sweet  apple  tart är gott']
+tokenize(lines)
