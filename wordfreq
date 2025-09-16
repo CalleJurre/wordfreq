@@ -1,19 +1,19 @@
-
 def tokenize(lines):
     words = []
     for line in lines:
         start = 0
-
         while start < len(line):
             if not line[start].isspace():
-                
+                #print(line[start])
                 if line[start].isdigit():
-                    print(f'{line[start]} is a digit')
+                    print (f'{line[start]} is a digit')
                 elif line[start].isalpha():
-                    print(f'{line[start]} is a letter')
+                    print (f'{line[start]} is a letter')
+                else:
+                    print (f'{line[start]} is a symbol')
             start += 1
     return words
 
 
-lines = ['  2  sw   4   10  eet  apple  tart är gott 1 2 3']
+lines = ['    1sweet  apple.,  tart är gott']
 tokenize(lines)
