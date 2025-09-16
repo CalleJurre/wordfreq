@@ -1,3 +1,4 @@
+
 def tokenize(lines):
     words = []
     for line in lines:
@@ -15,16 +16,14 @@ def tokenize(lines):
                 end = start
                 while end < len(line) and line[end].isalpha():
                     end += 1
-                words.append(line[start:end])
+                word = line[start:end].lower()
+                words.append(word)
                 start = end
         
             else:
                 words.append(line[start])
 
                 start += 1
+                
     return words
 
-
-lines = ['10  Sweet  Apple  Tarts.']
-tokens = tokenize(lines)
-print(tokens)
